@@ -1,26 +1,26 @@
-# Creating New Packets
+# Creación de nuevos paquetes
 
-Data sent between the client, editor, and server are sent as packets. Packets are defined in Intersect.Core/Networking/Packets.
+Los datos enviados entre el cliente, el editor y el servidor se envían como paquetes. Los paquetes se definen en Intersect.Core/Networking/Packets.
 
-Packets are stored in the Client/Editor/Server folders based on sender. For example the login packet sent from the client will be in the client folder.
+Los paquetes se almacenan en el Client/Editor/Server, carpetas basadas en el remitente. Por ejemplo, el paquete de inicio de sesión enviado desde el cliente estará en la carpeta del cliente.
 
-Creating new packets are as simple as creating new classes in those folders that inherit from CerasPacket and then writing some sending and handling code.
-
-
-## Sending Packets
-
-The client, editor, and server each have a PacketSender class in the Networking folder. 
-
-In short you need to create an instance of your packet class, and then pass that to the relevant SendPacket function.
+Crear nuevos paquetes es tan simple como crear nuevas clases en esas carpetas que hereden de CerasPacket y luego escribir algo de código de envío y manejo.
 
 
-## Handling Packets
+## Envío de paquetes
 
-The client, editor, and server also each have a PacketHandler class in the Networking folder.
+El cliente, el editor y el servidor tienen cada uno una clase PacketSender en la carpeta Networking. 
 
-You will need to create a HandlePacket function that accepts the new packet class you created.
+En resumen, necesitas crear una instancia de tu clase Packet, y luego pasarla a la función SendPacket correspondiente.
+
+
+## Manejo de paquetes
+
+El cliente, el editor y el servidor también tienen una clase PacketHandler en la carpeta Networking.
+
+Tendrá que crear una función HandlePacket que acepte la nueva clase de paquete que ha creado.
 
 
 
-Once you've created a new packet class, written the code to send the packet, and written the handler you're done! Easy right?
+Una vez que hayas creado una nueva clase de paquete, escrito el código para enviar el paquete, y escrito el manejador, ¡has terminado! ¿Fácil, verdad?
 
